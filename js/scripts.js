@@ -2,8 +2,8 @@ $(document).ready(function() {
   $("#formOne").submit(function(event) {
     event.preventDefault();
 
-    var userInput = parseInt($("#userInput").val());
-    //var input = numberInput.split("");
+    var userInput = $("#userInput").val();
+    var input = userInput.split("");
     $("#beepOutput").text(beepBoopArray(userInput));
     $("#beepOutput").show();
   });
@@ -12,13 +12,18 @@ $(document).ready(function() {
 
 
 // The function below will translate single numbers into designated words.
+
+
   function beepBoopArray(number) {
-    var translatorsArray = [3, 2, 1];
+    var translatorsArray = ["3", "2", "1"];
     var translationsArray = ["I'm sorry...", "Boop!", "Beep!"];
 
     for (var i = 0; i <= translatorsArray.length; i++) {
       if (number===translatorsArray[i]) {
         return translationsArray[i]
+      }
+      if (number !=translatorsArray[i]) {
+        return number
       }
     }
   }
