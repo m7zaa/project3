@@ -2,8 +2,8 @@ $(document).ready(function() {
   $("#formOne").submit(function(event) {
     event.preventDefault();
 
-    var userInput = $("#userInput").val();
-    var input = userInput.split("");
+    var userInput = parseInt($("#userInput").val());
+    //var input = numberInput.split("");
     $("#beepOutput").text(beepBoopArray(userInput));
     $("#beepOutput").show();
   });
@@ -11,20 +11,37 @@ $(document).ready(function() {
 
 
 
+
+
+// var countBack = function(count) {
+//     for(var i = count; i <= count; i += count) {
+//       console.log(i);
+//     }
+//   }
+
+
+
 // The function below will translate single numbers into designated words.
-
-
   function beepBoopArray(number) {
-    var translatorsArray = ["3", "2", "1"];
+    var translatorsArray = [3, 2, 1];
     var translationsArray = ["I'm sorry...", "Boop!", "Beep!"];
 
     for (var i = 0; i <= translatorsArray.length; i++) {
       if (number===translatorsArray[i]) {
         return translationsArray[i]
       }
-      if (number !=translatorsArray[i]) {
-        return number
-      }
+      var numberMultipliers = function(multiplier, count) {
+  if(multiplier < 0 || count < 0 || multiplier > count) {
+    return console.log("Do not enter a negative number or a multiplier that is higher than the count.")
+  } else if (isNaN(multiplier) || isNaN(count) || multiplier === "" || count === "") {
+    return console.log("Please enter a number.")
+  } else {
+    for(var i = multiplier; i <= count; i += multiplier) {
+      console.log(i);
+    }
+  }
+
+};
     }
   }
 
