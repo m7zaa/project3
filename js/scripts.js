@@ -3,29 +3,27 @@ $(document).ready(function() {
     event.preventDefault();
 
     var userInput = parseInt($("#userInput").val());
-    // var input = numberInput.split("");
+    //var input = numberInput.split("");
     $("#beepOutput").text(beepBoopArray(userInput));
     $("#beepOutput").show();
   });
 });
 
 
+
+// The function below will translate single numbers into designated words.
   function beepBoopArray(number) {
-    var translatorsArray = [1, 2, 3];
-    var translationsArray = ["Beep!", "Boop!", "I'm sorry..."];
+    var translatorsArray = [3, 2, 1];
+    var translationsArray = ["I'm sorry...", "Boop!", "Beep!"];
 
     for (var i = 0; i <= translatorsArray.length; i++) {
       if (number===translatorsArray[i]) {
         return translationsArray[i]
       }
     }
-
-    // return("?")
-
-
-
-
   }
+
+
       // for(var firstIndex = 0; firstIndex < input.length; firstIndex++) {
         // if (input.charAt(0) === "1") {
         //   console.log(test);
