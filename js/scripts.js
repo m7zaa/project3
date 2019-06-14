@@ -2,7 +2,7 @@ $(document).ready(function() {
   $("#formOne").submit(function(event) {
     event.preventDefault();
 
-    const userInput = parseInt($("#userInput").val());
+    var userInput = parseInt($("#userInput").val());
     //var input = numberInput.split("");
     $("#beepOutput").text(beepBoopArray(userInput));
     $("#beepOutput").show();
@@ -30,39 +30,27 @@ $(document).ready(function() {
       if (number===translatorsArray[i]) {
         return translationsArray[i]
       }
-    }
-  }
-
-      var numberMultipliers = function(multiplier, userInput) {
-        if(multiplier < 0 || userInput < 0 || multiplier > userInput) {
-          return console.log("Do not enter a negative number or a multiplier that is higher than the userInput.")
-        } else {
-          for(var i = multiplier; i <= userInput; i += multiplier) {
-          return  console.log(multiplier);
-          }
-        }
-
-        numberMultipliers(1, userInput);
-      };
 
 
 // BROKEN CODE
-//       var numberMultipliers = function(multiplier, count) {
-//   if(multiplier < 0 || count < 0 || multiplier > count) {
-//     return console.log("Do not enter a negative number or a multiplier that is higher than the count.")
-//   } else if (isNaN(multiplier) || isNaN(count) || multiplier === "" || count === "") {
-//     return console.log("Please enter a number.")
-//   } else {
-//     for(var i = multiplier; i <= count; i += multiplier) {
-//       console.log(i);
-//     }
-//   }
-//
-// };
+      var numberMultipliers = function(multiplier, count) {
+  if(multiplier < 0 || count < 0 || multiplier > count) {
+    return console.log("Do not enter a negative number or a multiplier that is higher than the count.")
+  } else if (isNaN(multiplier) || isNaN(count) || multiplier === "" || count === "") {
+    return console.log("Please enter a number.")
+  } else {
+    for(var i = multiplier; i <= count; i += multiplier) {
+      console.log(i);
+    }
+  }
+
+};
 
 
 
 
+    }
+  }
 
 
       // for(var firstIndex = 0; firstIndex < input.length; firstIndex++) {
