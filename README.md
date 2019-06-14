@@ -22,10 +22,10 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 
 | Behavior | Input | Output |
 | ------------- |:-------------:| -----:|
-| The program returns a range of numbers from 0 to the user's inputted number. | eg: "4" | eg: "0, 1, 2, 3, 4" |
 | If user input contains a "1" then the program replaces all digits with "Beep!". | eg: "14" | eg: "Beep!" |
 | If user input contains a "2" then the program replaces all digits with "Boop!". | eg: "25" | eg: "Boop!" |
 | If user input contains a "3" then the program replaces all digits with "I'm sorry, Dave. I'm afraid I can't do that.". | eg: "39" | eg: "I'm sorry, Dave. I'm afraid I can't do that." |
+| The program returns a range of numbers from 0 to the user's inputted number. | eg: "4" | eg: "0, 1, 2, 3, 4" |
 
 
 
